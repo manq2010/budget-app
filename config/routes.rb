@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # root "expenses#index"
-  root to: "home#index"
+  root to: "splash#index"
 end

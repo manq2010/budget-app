@@ -1,0 +1,67 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin smallButton {
+    color: var(--second);
+    background-color: transparent;
+    border: 1px solid var(--second);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    font-size: var(--fs-xs);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--second--tint);
+      outline: none;
+    }
+
+    // &:after {
+    //   display: none !important;
+    // } 
+}
+
+@mixin Button {
+    color: var(--main);
+    background-color: var(--main);
+    border: 1px solid var(--main);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.75rem;
+    font-size: var(--fs-s);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+
+    // width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--second);
+      outline: none;
+      border: 1px solid var(--second);
+      color: var(--white);
+    }
+
+    // &:after {
+    //   display: none !important;
+    // }
+}
