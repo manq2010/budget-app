@@ -1,10 +1,19 @@
+<section class="single-category">
+
+<div class="nav">
+<h5>transactions</h5>
+</div>
+
 <p style="color: green"><%= notice %></p>
+
+<%= link_to "", groups_path, class: 'back' %>
 
 <%= render @group %>
 
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
+  <%= link_to "Edit this group", edit_group_path(@group) %>
 
+
+  
   <%= button_to "Destroy this group", @group, method: :delete %>
-</div>
+
+</section>

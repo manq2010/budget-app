@@ -17,8 +17,7 @@ class GroupsController < ApplicationController
   end
 
   # GET /groups/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /groups or /groups.json
   def create
@@ -49,7 +48,6 @@ class GroupsController < ApplicationController
   end
 
   # DELETE /groups/1 or /
-
 
   # DELETE /groups/1 or /groups/1.json
   def destroy

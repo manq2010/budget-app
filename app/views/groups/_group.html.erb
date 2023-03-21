@@ -1,17 +1,19 @@
-<div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
+<div class="group-item">
+<img src="<%= group.icon %>" alt="<%= group.name %>" >
 
+<div class="details">
+  <div class="inner-details">
+    <h4 class="small-heading">
+      <%= group.name %>
+   </h4>
   <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
+    <%= group.created_at.strftime('%d %b %y') %>
   </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= group.user_id %>
-  </p>
-
+  </div>
+  <div class"outer-details">
+    <p>
+      total: $ 10
+    </p>
+  </div>
+</div>
 </div>
