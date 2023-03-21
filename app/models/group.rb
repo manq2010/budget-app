@@ -4,5 +4,5 @@ class Group < ApplicationRecord
 
   has_and_belongs_to_many :expenses
 
-  validates :name, :icon, :user_id, :expense_id, presence: true
+  validates :name, :icon, :user_id, presence: true
 end

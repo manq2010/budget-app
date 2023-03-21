@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     registration: 'register', edit: 'edit/profile'
   }, sign_out_via: [:get, :post]
 
-  resources :groups, path: 'categories', only: [:index, :new, :show] do 
+  resources :groups, path: 'categories' do 
     resources :expenses
   end
   # resources :users
