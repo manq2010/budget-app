@@ -102,3 +102,18 @@ h6 {
     font-size: clamp(26px, 5vw, var(--fs-heading));
     white-space: nowrap;
 }
+
+input {
+  border-radius: 0;
+  outline: 0;
+
+  &:focus {
+    outline: 0;
+  }
+  &:focus,
+  &:active {
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+}

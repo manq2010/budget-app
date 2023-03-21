@@ -65,3 +65,38 @@
     //   display: none !important;
     // }
 }
+
+@mixin field {
+  color: var(--text);
+  background-color: var(--white);
+  border: 1px solid var(--text-light);
+  padding: 1.25rem 1rem 1.25rem 0.5rem;;
+  font-size: var(--fs-m);
+  font-family: var(--font-mono-family);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: start;
+}
+
+@mixin back {
+  // position: relative;
+  // padding-left: 30px;
+  // margin-bottom: 10px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+  padding: 1rem;
+
+
+  &:before {
+    content: '<';
+    position: absolute;
+    left: 0;
+    color: var(--white);
+  }
+}
