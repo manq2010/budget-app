@@ -103,6 +103,15 @@ h6 {
     white-space: nowrap;
 }
 
+.smallest-heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  font-size: clamp(14px, 4vw, 18px);
+  white-space: nowrap;
+}
+
 input {
   border-radius: 0;
   outline: 0;
