@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(_resource)
     # your path goes here
-    expenses_path # as an example
+    groups_path # as an example
   end
 
   # def after_sign_up_path_for(resource)

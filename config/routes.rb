@@ -5,9 +5,10 @@ Rails.application.routes.draw do
     registration: 'register', edit: 'edit/profile'
   }, sign_out_via: [:get, :post]
 
-  resources :expenses
-  resources :groups
-  resources :users
+  resources :groups, path: 'categories', only: [:index, :new, :show] do 
+    resources :expenses
+  end
+  # resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
