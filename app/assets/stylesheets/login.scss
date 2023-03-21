@@ -73,6 +73,21 @@
         margin: 1rem;
         padding: 1rem;
 
+        input[type=submit] {
+            color: var(--white);
+            margin: 0;
+            background-color: transparent;
+            border: none;
+            font-size: var(--fs-m);
+
+            &:hover,
+            &:focus {
+                border: 1px solid var(--white);
+                border-radius: var(--border-radius);
+            }
+
+        }
+
         @media (min-width: 320px){
             // padding: 1rem 2.75rem;
     

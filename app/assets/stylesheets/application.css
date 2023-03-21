@@ -21,16 +21,7 @@
   box-sizing: inherit;
 }
 
-/* .nav-bar {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8f8f8;
-  padding: 1rem;
-}
-
-.nav-item {
+/* .nav-item {
   margin-right: 1rem;
 }
 

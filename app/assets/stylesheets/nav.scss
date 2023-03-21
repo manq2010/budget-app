@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main);
+    color: var(--white);
+    width: 100%;
+    height: var(--navbar-height);
+
+    h4 {
+        text-transform: uppercase;
+        font-size: clamp(26px, 5vw, 30px);
+        margin-top: 5px;
+    }
+  }
