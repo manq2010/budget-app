@@ -2,9 +2,19 @@ class ExpensesController < ApplicationController
   before_action :set_group, only: %i[new create edit update destroy]
   before_action :set_expense, only: %i[edit update destroy]
 
+  # def index
+  #   @group = Group.find(params[:group_id])
+  #   @expenses = @group.expenses.where(author_id: current_user.id)
+  # end
+
+  def index
+    @expenses = Expense.all
+  end
+
   # GET /expenses/new
   def new
-    @expense = @group.expenses.new
+    @group = Group.find(params[:group_id])
+    @expense = Expense.new
   end
 
   # GET /expenses/1/edit
@@ -13,7 +23,9 @@ class ExpensesController < ApplicationController
   # POST /expenses
   # POST /expenses.json
   def create
-    @expense = @group.expenses.new(expense_params)
+    @group = Group.find(params[:group_id])
+    @expense = current_user.expenses.new(expense_params)
+    @expense.author_id = current_user.id
 
     respond_to do |format|
       if @expense.save
