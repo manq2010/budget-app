@@ -34,6 +34,8 @@
               <td><%= expense.amount %></td>
               <td><%= expense.created_at.strftime('%B %d, %Y') %></td>
               <td>
+              <%= link_to "View", group_expense_path(@group, expense) %> |
+              <%= button_to "Delete", [@group, expense], method: :delete, data: { confirm: 'Are you sure?' } %>
               </td>
             </tr>
           <% end %>
@@ -43,6 +45,5 @@
       <p>No expenses found for this group.</p>
     <% end %>
   </div>
-
 
 </section>

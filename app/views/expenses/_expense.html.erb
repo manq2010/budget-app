@@ -10,13 +10,15 @@
   </p>
 
   <p>
-    <strong>User:</strong>
-    <%= expense.user_id %>
+    <strong>Category: </strong>
+    <%=  @group.name %>
   </p>
 
   <p>
-    <strong>Group:</strong>
-    <%= expense.group_id %>
+  <strong>Created:</strong>
+  <%= expense.created_at.strftime('%B %d, %Y') %>
   </p>
+
+  @group.name
 
 </div>

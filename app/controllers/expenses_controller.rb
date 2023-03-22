@@ -11,6 +11,11 @@ class ExpensesController < ApplicationController
     @expenses = Expense.all
   end
 
+  def show
+    @expense = Expense.find(params[:id])
+    @group = Group.find(params[:group_id])
+  end
+
   # GET /expenses/new
   def new
     @group = Group.find(params[:group_id])
@@ -18,7 +23,9 @@ class ExpensesController < ApplicationController
   end
 
   # GET /expenses/1/edit
-  def edit; end
+  def edit
+    @group = Group.find(params[:group_id])
+  end
 
   # POST /expenses
   # POST /expenses.json
