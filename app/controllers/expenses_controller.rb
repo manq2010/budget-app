@@ -27,6 +27,10 @@ class ExpensesController < ApplicationController
     @expense = current_user.expenses.new(expense_params)
     @expense.author_id = current_user.id
 
+    @my_group_object = Group.find_by(id: params[:group_id])
+
+    @my_group_object.expenses << [@expense]
+
     respond_to do |format|
       if @expense.save
         format.html { redirect_to group_path(@group), notice: 'Expense was successfully created.' }
