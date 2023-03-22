@@ -31,11 +31,16 @@
           <% @group.expenses.order(created_at: :desc).each do |expense| %>
             <tr>
               <td><%= expense.name %></td>
-              <td><%= expense.amount %></td>
+              <td class="amount"><%= expense.amount %></td>
               <td><%= expense.created_at.strftime('%B %d, %Y') %></td>
               <td>
-              <%= link_to "View", group_expense_path(@group, expense) %> |
-              <%= button_to "Delete", [@group, expense], method: :delete, data: { confirm: 'Are you sure?' } %>
+              <div class="action">
+        
+                <%= link_to "View", group_expense_path(@group, expense), class: "table-view"  %>
+            
+                <%= button_to "Delete", [@group, expense], method: :delete, data: { confirm: 'Are you sure?' }, class: "table-delete"  %>
+         
+              </div>
               </td>
             </tr>
           <% end %>
