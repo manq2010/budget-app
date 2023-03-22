@@ -1,13 +1,19 @@
 <section class="single-category">
-  <div class="nav">
-    <h5>transactions</h5>
-  </div>
+<div class="nav">
+<h5>Category | Expenses</h5>
+</div>
 
-  <p style="color: green"><%= notice %></p>
+<p style="color: green"><%= notice %></p>
 
-  <%= link_to "", groups_path, class: 'back' %>
+<%= link_to "", groups_path, class: 'back' %>
 
-  <%= render @group %>
+
+
+<%= render @group %>
+
+<%= link_to "Add new expense", new_group_expense_path(@group) %>
+<%= link_to "Edit this Category", edit_group_path(@group) %>
+<%= button_to "Delete this Category", @group, method: :delete %>
 
   <div class="expenses-list">
     <h3>Expenses</h3>
@@ -18,6 +24,7 @@
             <th>Name</th>
             <th>Amount</th>
             <th>Date</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -26,19 +33,16 @@
               <td><%= expense.name %></td>
               <td><%= expense.amount %></td>
               <td><%= expense.created_at.strftime('%B %d, %Y') %></td>
+              <td>
+              </td>
             </tr>
           <% end %>
         </tbody>
       </table>
-      <p>Total amount: <%= @group.expenses.sum(:amount) %></p>
     <% else %>
       <p>No expenses found for this group.</p>
     <% end %>
   </div>
 
-  <%= link_to "Edit this group", edit_group_path(@group) %>
 
-  <%= link_to "New expense", new_group_expense_path(@group) %>
-
-  <%= button_to "Destroy this group", @group, method: :delete %>
 </section>
