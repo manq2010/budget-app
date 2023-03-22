@@ -2,13 +2,26 @@ class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]
 
   # GET /groups or /groups.json
+  # def index
+  #   # @groups = Group.where(user: current_user)
+  #   @groups = current_user.groups
+  # end
+
   def index
-    @groups = Group.where(user: current_user)
+    @groups = current_user.groups
+    @group_totals = @groups.to_h { |group| [group.id, group.expenses.sum(:amount)] }
   end
 
   # GET /groups/1 or /groups/1.json
+  # def show
+  #   @group = current_user.groups.find(params[:id])
+  #   @expenses = @group.expenses
+  # end
+
   def show
-    @expenses = @group.expenses
+    @group = current_user.groups.find(params[:id])
+    @expenses = @group.expenses.order(created_at: :desc)
+    @total_amount = @expenses.sum(:amount)
   end
 
   # GET /groups/new
@@ -25,7 +38,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to group_url(@group), notice: 'Group was successfully created.' }
+        format.html { redirect_to group_url(@group), notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @group }
       else
         format.html { render :new, status: :unprocessable_entity }
