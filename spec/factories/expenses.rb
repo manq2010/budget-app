@@ -1,8 +1,7 @@
 FactoryBot.define do
   factory :expense do
     name { "MyString" }
-    amount { false }
+    amount { 10 }
     user { nil }
-    group { nil }
   end
 end
