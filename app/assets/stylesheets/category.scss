@@ -120,15 +120,20 @@
         }
         
         @media (min-width: 768px){
-            width: 60%;
+            position: static;
+            // bottom: 0;
+            z-index: 4;
+            opacity: 1;
+            width: 20%;
+            margin-bottom: 1rem;
         }
         
         @media (min-width: 1080px){
-            width: 40%;
+            width: 22%;
         }
         
         @media (min-width: 1200px){
-            width: 40%;
+            width: 24%;
         }
 
     }

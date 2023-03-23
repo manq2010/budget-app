@@ -98,6 +98,22 @@
     left: 0;
     color: var(--white);
   }
+
+  @media (min-width: 480px){
+    // padding: 1rem 2.50rem;
+    &:before {
+      content: 'Back';
+      left: 1rem;
+    }
+  }
+
+  @media (min-width: 768px){
+    // padding: 1rem 2.50rem;
+    &:before {
+      content: 'Back';
+      left: 2rem;
+    }
+  }
 }
 
 @mixin boxShadow {
