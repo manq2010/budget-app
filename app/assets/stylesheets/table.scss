@@ -1,0 +1,90 @@
+@import 'mixins';
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    // width: max-content;
+    // border-radius: var(--border-radius);
+    gap: 1rem;
+    
+    th,
+    td {
+        padding: 0.5rem;
+        text-align: left;
+
+        .action {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            .table-expense {
+                @include smallButton;
+                margin: 0;
+                color: var(--white);
+                background-color: var(--second);
+                border: 1px solid var(--second);
+        
+                &:hover,
+                &:focus,
+                &:active {
+                  background-color: var(--main);
+                  outline: none;
+                  border: 1px solid var(--main);
+                }
+            }
+
+            .table-view {
+                @include smallButton;
+                margin: 0;
+                color: var(--white);
+                background-color: var(--second);
+                border: 1px solid var(--second);
+        
+                &:hover,
+                &:focus,
+                &:active {
+                  background-color: var(--main);
+                  outline: none;
+                  border: 1px solid var(--main);
+                }
+            }
+
+            .table-delete {
+                @include smallButton;
+                margin: 0;
+                color: var(--white);
+                background-color: var(--red);
+                border: 1px solid var(--red);
+        
+                &:hover,
+                &:focus,
+                &:active {
+                  background-color: var(--main);
+                  outline: none;
+                  border: 1px solid var(--main);
+                }
+            }
+            
+        }
+    }
+
+    th {
+        background-color: var(--main);
+        font-size: var(--fs-m);
+        color: var(--white);
+    }
+
+    tr {
+        background-color: var(--main-light);
+    }
+    
+    tr:nth-child(odd) {
+        // background-color: #f2f2f2;
+        background-color: var(--main-lightest);
+    }
+    
+    tr:hover {
+        @include boxShadow;
+        // background-color: #ddd;
+    }
+}

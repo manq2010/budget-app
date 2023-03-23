@@ -1,0 +1,33 @@
+:root {
+    --main: #3778c2;
+    --main-light: #afc9e7;
+    --main-lightest: #ebf2f9;
+    --main-shadow: #1c3c61;
+    --second: #5fb523;
+    --second--tint: #437f19;
+    --text: #434b54;
+    --text-light: #7b8187;
+    --text-lightest: #d9dbdd;
+    --white: #ffffff;
+    --red: #ff6666;
+    --font-main-family:
+      'Calibre',
+      'Inter',
+      'San Francisco',
+      'SF Pro Text',
+      -apple-system,
+      system-ui,
+      sans-serif;
+    --font-mono-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    --fs-heading: 33px;
+    --fs-xxl: 22px;
+    --fs-xl: 20px;
+    --fs-l: 18px;
+    --fs-m: 16px;
+    --fs-s: 14px;
+    --fs-xs: 13px;
+    --fs-xxs: 12px;
+    --border-radius: 5px;
+    --navbar-height: 50px;
+    --navbar-scroll-height: 60px;
+  }

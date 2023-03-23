@@ -1,0 +1,18 @@
+<section class="categories">
+  <div class="nav">
+    <h4>categories</h4>
+  </div>
+  
+  <p style="color: green"><%= notice %></p>
+
+  <ul id="groups">
+    <% @groups.each do |group| %>
+      <li class="group-category">
+        <%= link_to group_path(group) do %>
+          <%= render group %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Add Category", new_group_path, class: "new-category" %>
+</section>
