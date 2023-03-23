@@ -67,3 +67,16 @@
     }
 
   }
+
+  .expense {
+    height: var(--navbar-height2);
+    align-items: start;
+    .actions.delete {
+
+        margin: 3rem 9rem 0 0;
+    }
+
+    .actions.edit {
+        margin: 3rem 0.5rem 0 0;
+    }
+  }

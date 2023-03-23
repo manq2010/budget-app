@@ -1,20 +1,20 @@
 <section class="single-category">
-<div class="nav">
-<h5>Category | Expenses</h5>
+<div class="nav expense">
+<h5> Category | Expenses</h5>
+  <%= button_to "Delete Category", @group, method: :delete, class: 'actions delete' %>
+  <%= link_to "Edit Category", edit_group_path(@group), class: 'actions edit'%>
 </div>
 
-<p style="color: green", class="notice"><%= notice %></p>
+<p style="color: green", class="notice other"><%= notice %></p>
 
 <%= link_to "", groups_path, class: 'back' %>
 
 <%= render @group %>
 
-<%= link_to "Edit this Category", edit_group_path(@group) %>
-<%= button_to "Delete this Category", @group, method: :delete %>
 
 <div class="expenses-list">
-<h3>Expenses</h3>
 <% if @group.expenses.any? %>
+<h4>Expenses</h4>
 <table>
 <thead>
 <tr>
@@ -28,27 +28,22 @@
         <% @group.expenses.order(created_at: :desc).each do |expense| %>
           <tr>
           <td><%= expense.name %></td>
-          <td class="amount"><%= expense.amount %></td>
+          <td class="amount">$<%= expense.amount %></td>
           <td><%= expense.created_at.strftime('%B %d, %Y') %></td>
           <td>
-          <div class="action">
-          
-          <%= link_to "View", group_expense_path(@group, expense), class: "table-view"  %>
-          
-                <%= button_to "Delete", [@group, expense], method: :delete, data: { confirm: 'Are you sure?' }, class: "table-delete"  %>
-         
-                </div>
-              </td>
+              <div class="action">
+                  <%= link_to "View", group_expense_path(@group, expense), class: "table-view"  %>
+                  <%= button_to "Delete", [@group, expense], method: :delete, data: { confirm: 'Are you sure?' }, class: "table-delete"  %>
+              </div>
+            </td>
             </tr>
           <% end %>
         </tbody>
       </table>
-    <% else %>
-      <p>No expenses found for this group.</p>
     <% end %>
   </div>
   
   <%= link_to "Add expense", new_group_expense_path(@group), class: "new-expense" %>
-  
+
   </section>
   
