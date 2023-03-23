@@ -61,5 +61,5 @@ en:
       not_found: "not found"
       not_locked: "was not locked"
       not_saved:
-        one: "1 error prohibited sign-up:"
-        other: "%{count} errors prohibited sign-up:"
+        one: "1 error prohibited %{resource} process:"
+        other: "%{count} errors prohibited %{resource} process:"

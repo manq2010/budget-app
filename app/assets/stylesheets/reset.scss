@@ -1,13 +1,13 @@
 @import 'mixins';
 
-.login-screen {
+.reset-screen {
     margin-top: 0;
     @include flexCenter;
     justify-content: flex-start;
     flex-direction: column;
 
     .field:first-of-type {
-        // margin-top: 6rem;
+        margin-top: 6rem;
     }
 
     .field {
@@ -33,8 +33,7 @@
             }
     }
 
-    input[type=email],
-    input[type=password] {
+    input[type=email] {
         @include field;
         @media (min-width: 320px){
             padding: 1.25rem 2rem 1.25rem 0.5rem;
@@ -59,11 +58,6 @@
 
     input[type=email]{
         border: 1px solid var(--text-light);
-    }
-
-    input[type=password]{
-        border-top: none;
-        
     }
 
     .actions {
@@ -136,5 +130,13 @@
 
     .back {
         @include back;
+    }
+
+    #error_explanation {
+        @include errorExplain;
+
+        li {
+            font-size: var(--fs-m);
+        }
     }
 }

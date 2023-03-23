@@ -1,9 +1,13 @@
 <section class="categories">
   <div class="nav">
-    <h4>categories</h4>
+    <h5>categories</h5>
+    <% if current_user %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+  <% end %>
   </div>
+
   
-  <p style="color: green"><%= notice %></p>
+  <p style="color: green", class="notice"><%= notice %></p>
 
   <ul id="groups">
     <% @groups.each do |group| %>

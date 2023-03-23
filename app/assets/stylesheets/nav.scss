@@ -1,4 +1,7 @@
 .nav {
+    position: fixed;
+    z-index: 5;
+    opacity: 0.9;
     display: flex;
     justify-content: center;
     align-items: center;

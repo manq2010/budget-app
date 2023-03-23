@@ -8,7 +8,7 @@
     flex-direction: column;
 
     .field:first-of-type {
-        margin-top: 3rem;
+        margin-top: 6rem;
     }
 
     input[type=text],
@@ -47,13 +47,8 @@
     }
 
     .actions {
-        position: fixed;
-        top: 0;
-        right: 0;
-        margin: 1rem;
-        padding: 1rem;
-
-
+        @include action;
+    
         input[type=submit] {
             color: var(--white);
             margin: 0;
@@ -106,7 +101,7 @@
     }
 
     #error_explanation {
-        margin:  1rem 0;
+        @include errorExplain;
 
         li {
             font-size: var(--fs-m);

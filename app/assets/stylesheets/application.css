@@ -21,6 +21,12 @@
   box-sizing: inherit;
 }
 
+.notice,
+.alert {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
 /* .nav-item {
   margin-right: 1rem;
 }

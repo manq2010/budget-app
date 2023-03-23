@@ -1,41 +1,19 @@
 @import 'mixins';
 
-.login-screen {
+.add-expense {
     margin-top: 0;
     @include flexCenter;
     justify-content: flex-start;
     flex-direction: column;
 
     .field:first-of-type {
-        // margin-top: 6rem;
+        margin-top: 6rem;
     }
 
-    .field {
-       
-        @media (min-width: 320px){
-            // padding: 1rem 2.75rem;
-            }
-          
-        @media (min-width: 480px){
-            // padding: 1rem 2.50rem;
-            }
-          
-        @media (min-width: 768px){
-            // padding: 1rem 2.25rem;
-            }
-          
-        @media (min-width: 1080px){
-            // padding: 1rem 2.00rem;
-            }
-          
-        @media (min-width: 1200px){
-            // padding: 1rem 1.75rem;
-            }
-    }
-
-    input[type=email],
-    input[type=password] {
+    input[type=text],
+    input[type=number] {
         @include field;
+        border: 1px solid var(--text-light);
         @media (min-width: 320px){
             padding: 1.25rem 2rem 1.25rem 0.5rem;
             }
@@ -55,15 +33,6 @@
         @media (min-width: 1200px){
             padding: 1.25rem 6rem 1.25rem 0.5rem;
             }
-    }
-
-    input[type=email]{
-        border: 1px solid var(--text-light);
-    }
-
-    input[type=password]{
-        border-top: none;
-        
     }
 
     .actions {
@@ -116,25 +85,15 @@
             }
     }
 
-    a {
-        // display: inline-block;
-        text-decoration: none;
-        color: inherit;
-        position: relative;
-        margin-top: 1rem;
-      
-        &:hover,
-        &:focus {
-          color: var(--text);
-        }
-
-        @media (min-width: 768px){
-            // padding: 1rem 2.25rem;
-            margin-top: 0rem;
-            }
-    }
-
     .back {
         @include back;
+    }
+
+    #error_explanation {
+        @include errorExplain;
+
+        li {
+            font-size: var(--fs-m);
+        }
     }
 }

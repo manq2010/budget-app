@@ -87,8 +87,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  z-index: 5;
 
 
   &:before {
@@ -107,4 +108,18 @@ box-shadow: 0 10px 30px -15px var(--main-shadow);
 &:focus {
   box-shadow: 0 20px 30px -15px var(--main-shadow);
 }
+}
+
+@mixin action {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+@mixin errorExplain {
+  margin-top:  4rem;
+  margin-bottom: 0.5rem;
 }

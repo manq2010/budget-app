@@ -1,9 +1,16 @@
-<h1>New expense</h1>
+<section class="add-expense">
+
+<div class="nav">
+<h5>Add Expense</h5>
+</div>
 
 <%= render "form", expense: @expense %>
 
 <br>
 
-<div>
-  <%= link_to "Back to category", @group %> |
-</div>
+<%= link_to "", @group, class: 'back'%>
+
+
+<%= link_to "", groups_path, class: 'back' %>
+
+</section>

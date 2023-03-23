@@ -4,12 +4,12 @@
     @include flexCenter;
      flex-direction: column;
     //  height: 100vh;
-    gap: 4rem;
+    // gap: 2rem;
 
     .log-in {
         @include Button;
         color: var(--white);
-        padding: 1rem 3rem;
+        padding: 1rem 2rem;
         background-color: var(--main);
         border: 1px solid var(--main);
         text-transform: uppercase;
