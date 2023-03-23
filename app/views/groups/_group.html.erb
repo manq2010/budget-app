@@ -3,7 +3,7 @@
 
   <div class="details">
     <div class="inner-details">
-      <h4 class="small-heading">
+      <h4 class="smallest-headingg">
         <%= group.name %>
       </h4>
       <p>
@@ -12,9 +12,9 @@
     </div>
     <div class="outer-details">
       <% if action_name == 'index' %>
-        <p>Total: <%= @group_totals&.[](group.id) %></p>
+        <p>Total: $<%= @group_totals&.[](group.id) %></p>
       <% elsif action_name == 'show' %>
-        <p>Total amount: <%= group.expenses.sum(:amount) %></p>
+        <p>Total amount: $<%= group.expenses.sum(:amount) %></p>
       <% end %>
     </div>
   </div>

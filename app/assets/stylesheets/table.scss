@@ -1,90 +1,148 @@
-@import 'mixins';
+@import "mixins";
 
 table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    // width: max-content;
-    // border-radius: var(--border-radius);
-    gap: 1rem;
-    
-    th,
-    td {
-        padding: 0.5rem;
-        text-align: left;
+  margin: 0 auto;
+  border-collapse: collapse;
+  // width: max-content;
+  // border-radius: var(--border-radius);
+  gap: 1rem;
+  margin-bottom: 4rem;
+  font-size: var(--fs-xs);
 
-        .action {
-            display: flex;
-            flex-direction: row;
-            gap: 0.5rem;
+  @media (min-width: 320px) {
+    // padding: 1rem 2.75rem;
+    font-size: var(--fs-s);
+  }
 
-            .table-expense {
-                @include smallButton;
-                margin: 0;
-                color: var(--white);
-                background-color: var(--second);
-                border: 1px solid var(--second);
-        
-                &:hover,
-                &:focus,
-                &:active {
-                  background-color: var(--main);
-                  outline: none;
-                  border: 1px solid var(--main);
-                }
-            }
+  @media (min-width: 480px) {
+    // padding: 1rem 2.50rem;
+    font-size: var(--fs-m);
+    gap: 1.5rem;
+  }
 
-            .table-view {
-                @include smallButton;
-                margin: 0;
-                color: var(--white);
-                background-color: var(--second);
-                border: 1px solid var(--second);
-        
-                &:hover,
-                &:focus,
-                &:active {
-                  background-color: var(--main);
-                  outline: none;
-                  border: 1px solid var(--main);
-                }
-            }
+  @media (min-width: 768px) {
+    // padding: 1rem 2.25rem;
+    margin-bottom: 0;
+    font-size: var(--fs-xl);
+    gap: 2rem;
+  }
 
-            .table-delete {
-                @include smallButton;
-                margin: 0;
-                color: var(--white);
-                background-color: var(--red);
-                border: 1px solid var(--red);
-        
-                &:hover,
-                &:focus,
-                &:active {
-                  background-color: var(--main);
-                  outline: none;
-                  border: 1px solid var(--main);
-                }
-            }
-            
-        }
+  @media (min-width: 1080px) {
+    // padding: 1rem 2.00rem;
+  }
+
+  @media (min-width: 1200px) {
+    // padding: 1rem 1.75rem;
+  }
+
+  th,
+  td {
+    padding: 0.1rem;
+    text-align: left;
+
+    @media (min-width: 480px) {
+      padding: 0.3rem;
     }
 
-    th {
-        background-color: var(--main);
-        font-size: var(--fs-m);
+    @media (min-width: 768px) {
+      padding: 0.6rem;
+    }
+
+    @media (min-width: 1080px) {
+      padding: 1rem;
+    }
+
+    .action {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      @media (min-width: 480px) {
+        flex-direction: row;
+      }
+
+      @media (min-width: 768px) {
+        gap: 1rem;
+      }
+
+      @media (min-width: 1080px) {
+        gap: 2rem;
+      }
+
+      .table-expense {
+        @include smallButton;
+        margin: 0;
         color: var(--white);
-    }
+        background-color: var(--second);
+        border: 1px solid var(--second);
 
-    tr {
-        background-color: var(--main-light);
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--main);
+          outline: none;
+          border: 1px solid var(--main);
+        }
+      }
+
+      .table-view {
+        @include smallButton;
+        margin: 0;
+        color: var(--white);
+        background-color: var(--second);
+        border: 1px solid var(--second);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--main);
+          outline: none;
+          border: 1px solid var(--main);
+        }
+      }
+
+      .table-delete {
+        @include smallButton;
+        margin: 0;
+        color: var(--white);
+        background-color: var(--red);
+        border: 1px solid var(--red);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--main);
+          outline: none;
+          border: 1px solid var(--main);
+        }
+      }
     }
-    
-    tr:nth-child(odd) {
-        // background-color: #f2f2f2;
-        background-color: var(--main-lightest);
+  }
+
+  .table-desktop {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
     }
-    
-    tr:hover {
-        @include boxShadow;
-        // background-color: #ddd;
-    }
+  }
+
+  th {
+    background-color: var(--main);
+    font-size: var(--fs-m);
+    color: var(--white);
+  }
+
+  tr {
+    background-color: var(--main-light);
+  }
+
+  tr:nth-child(odd) {
+    // background-color: #f2f2f2;
+    background-color: var(--main-lightest);
+  }
+
+  tr:hover {
+    @include boxShadow;
+    // background-color: #ddd;
+  }
 }
