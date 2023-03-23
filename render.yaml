@@ -1,6 +1,6 @@
 databases:
   - name: mancoba
-    databaseName: mancoba_dksq
+    databaseName: mancoba_dksq_lc5a
     user: mancoba_user
 
 services:
@@ -12,7 +12,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mancoba_dksq
+          name: mancoba_dksq_lc5a
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
