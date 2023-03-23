@@ -37,7 +37,7 @@ The Recipe App was built with:
 
 ### Live Demo
 
-You can view a live demo of the Recipe App at COMING SOON.
+[Live preview](https://xpenses-list-dev.onrender.com)
 
 ## Getting Started
 
