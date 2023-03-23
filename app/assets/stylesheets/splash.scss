@@ -3,8 +3,6 @@
 .splash-screen {
   @include flexCenter;
   flex-direction: column;
-  //  height: 100vh;
-  // gap: 2rem;
 
   .log-in {
     @include Button;
@@ -13,25 +11,6 @@
     background-color: var(--main);
     border: 1px solid var(--main);
     text-transform: uppercase;
-    @media (min-width: 320px) {
-      // padding: 1rem 2.75rem;
-    }
-
-    @media (min-width: 480px) {
-      // padding: 1rem 2.50rem;
-    }
-
-    @media (min-width: 768px) {
-      // padding: 1rem 2.25rem;
-    }
-
-    @media (min-width: 1080px) {
-      // padding: 1rem 2.00rem;
-    }
-
-    @media (min-width: 1200px) {
-      // padding: 1rem 1.75rem;
-    }
   }
 
   .sign-up {

@@ -40,29 +40,6 @@
       border: 1px solid var(--second);
       background-color: var(--second);
     }
-
-    @media (min-width: 320px) {
-      // padding: 1rem 2.75rem;
-    }
-
-    @media (min-width: 480px) {
-      // padding: 1rem 2.50rem;
-    }
-
-    @media (min-width: 768px) {
-      // display: flex;
-      // position: static;
-      // margin: 1rem 0;
-      // padding: 0;
-    }
-
-    @media (min-width: 1080px) {
-      // padding: 1rem 2.00rem;
-    }
-
-    @media (min-width: 1200px) {
-      // padding: 1rem 1.75rem;
-    }
   }
 }
 

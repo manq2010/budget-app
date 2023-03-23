@@ -13,11 +13,6 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(_resource)
-    # your path goes here
-    groups_path # as an example
+    groups_path
   end
-
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
 end

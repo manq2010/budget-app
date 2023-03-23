@@ -29,10 +29,6 @@
     background-color: var(--second--tint);
     outline: none;
   }
-
-  // &:after {
-  //   display: none !important;
-  // }
 }
 
 @mixin Button {
@@ -58,10 +54,6 @@
     border: 1px solid var(--second);
     color: var(--white);
   }
-
-  // &:after {
-  //   display: none !important;
-  // }
 }
 
 @mixin field {
@@ -80,10 +72,6 @@
 }
 
 @mixin back {
-  // position: relative;
-  // padding-left: 30px;
-  // margin-bottom: 10px;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -99,7 +87,6 @@
   }
 
   @media (min-width: 480px) {
-    // padding: 1rem 2.50rem;
     &:before {
       content: "Back";
       left: 1rem;
@@ -107,7 +94,6 @@
   }
 
   @media (min-width: 768px) {
-    // padding: 1rem 2.50rem;
     &:before {
       content: "Back";
       left: 2rem;
@@ -116,10 +102,6 @@
 }
 
 @mixin backHome {
-  // position: relative;
-  // padding-left: 30px;
-  // margin-bottom: 10px;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -137,7 +119,6 @@
   }
 
   @media (min-width: 480px) {
-    // padding: 1rem 2.50rem;
     &:before {
       content: "XpenseList";
       left: 1rem;
@@ -145,7 +126,6 @@
   }
 
   @media (min-width: 768px) {
-    // padding: 1rem 2.50rem;
     &:before {
       left: 2rem;
     }
@@ -154,7 +134,6 @@
 
 @mixin boxShadow {
   box-shadow: 0 10px 30px -15px var(--main-shadow);
-  // transition: var(--transition-effect);
 
   &:hover,
   &:focus {

@@ -52,14 +52,6 @@
       }
     }
 
-    @media (min-width: 320px) {
-      // padding: 1rem 2.75rem;
-    }
-
-    @media (min-width: 480px) {
-      // padding: 1rem 2.50rem;
-    }
-
     @media (min-width: 768px) {
       display: flex;
       position: static;
@@ -71,14 +63,6 @@
         color: var(--white);
         margin: 0;
       }
-    }
-
-    @media (min-width: 1080px) {
-      // padding: 1rem 2.00rem;
-    }
-
-    @media (min-width: 1200px) {
-      // padding: 1rem 1.75rem;
     }
   }
 
@@ -113,7 +97,6 @@
 
     @media (min-width: 768px) {
       position: static;
-      // bottom: 0;
       z-index: 4;
       opacity: 1;
       width: 20%;
