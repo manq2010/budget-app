@@ -1,74 +1,74 @@
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flexBetween {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @mixin smallButton {
-    color: var(--second);
-    background-color: transparent;
-    border: 1px solid var(--second);
-    border-radius: var(--border-radius);
-    padding: 0.75rem 1rem;
-    font-size: var(--fs-xs);
-    font-family: var(--font-mono-family);
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: var(--transition);
+  color: var(--second);
+  background-color: transparent;
+  border: 1px solid var(--second);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  font-size: var(--fs-xs);
+  font-family: var(--font-mono-family);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
 
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--second--tint);
-      outline: none;
-    }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--second--tint);
+    outline: none;
+  }
 
-    // &:after {
-    //   display: none !important;
-    // } 
+  // &:after {
+  //   display: none !important;
+  // }
 }
 
 @mixin Button {
-    color: var(--main);
-    background-color: var(--main);
-    border: 1px solid var(--main);
-    border-radius: var(--border-radius);
-    padding: 1.25rem 1.75rem;
-    font-size: var(--fs-s);
-    font-family: var(--font-mono-family);
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: var(--transition);
-    display: flex;
-    justify-content: center;
+  color: var(--main);
+  background-color: var(--main);
+  border: 1px solid var(--main);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.75rem;
+  font-size: var(--fs-s);
+  font-family: var(--font-mono-family);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
 
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--second);
-      outline: none;
-      border: 1px solid var(--second);
-      color: var(--white);
-    }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--second);
+    outline: none;
+    border: 1px solid var(--second);
+    color: var(--white);
+  }
 
-    // &:after {
-    //   display: none !important;
-    // }
+  // &:after {
+  //   display: none !important;
+  // }
 }
 
 @mixin field {
   color: var(--text);
   background-color: var(--white);
   border: 1px solid var(--text-light);
-  padding: 1.25rem 1rem 1.25rem 0.5rem;;
+  padding: 1.25rem 1rem 1.25rem 0.5rem;
   font-size: var(--fs-m);
   font-family: var(--font-mono-family);
   line-height: 1;
@@ -91,26 +91,25 @@
   padding: 0.5rem;
   z-index: 5;
 
-
   &:before {
-    content: '<';
+    content: "<";
     position: absolute;
     left: 0;
     color: var(--white);
   }
 
-  @media (min-width: 480px){
+  @media (min-width: 480px) {
     // padding: 1rem 2.50rem;
     &:before {
-      content: 'Back';
+      content: "Back";
       left: 1rem;
     }
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     // padding: 1rem 2.50rem;
     &:before {
-      content: 'Back';
+      content: "Back";
       left: 2rem;
     }
   }
@@ -130,23 +129,22 @@
   font-size: var(--fs-l);
   font-style: italic;
 
-
   &:before {
-    content: 'xL';
+    content: "xL";
     position: absolute;
     left: 0;
     color: var(--white);
   }
 
-  @media (min-width: 480px){
+  @media (min-width: 480px) {
     // padding: 1rem 2.50rem;
     &:before {
-      content: 'XpenseList';
+      content: "XpenseList";
       left: 1rem;
     }
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     // padding: 1rem 2.50rem;
     &:before {
       left: 2rem;
@@ -155,13 +153,13 @@
 }
 
 @mixin boxShadow {
-box-shadow: 0 10px 30px -15px var(--main-shadow);
-// transition: var(--transition-effect);
+  box-shadow: 0 10px 30px -15px var(--main-shadow);
+  // transition: var(--transition-effect);
 
-&:hover,
-&:focus {
-  box-shadow: 0 20px 30px -15px var(--main-shadow);
-}
+  &:hover,
+  &:focus {
+    box-shadow: 0 20px 30px -15px var(--main-shadow);
+  }
 }
 
 @mixin action {
@@ -174,6 +172,6 @@ box-shadow: 0 10px 30px -15px var(--main-shadow);
 }
 
 @mixin errorExplain {
-  margin-top:  4rem;
+  margin-top: 4rem;
   margin-bottom: 0.5rem;
 }

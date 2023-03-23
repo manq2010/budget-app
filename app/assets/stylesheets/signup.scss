@@ -1,110 +1,105 @@
-@import 'mixins';
+@import "mixins";
 
 .sign-up {
+  margin-top: 0;
+  @include flexCenter;
+  justify-content: flex-start;
+  flex-direction: column;
 
-    margin-top: 0;
-    @include flexCenter;
-    justify-content: flex-start;
-    flex-direction: column;
+  .field:first-of-type {
+    margin-top: 6rem;
+  }
 
-    .field:first-of-type {
-        margin-top: 6rem;
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    @include field;
+    @media (min-width: 320px) {
+      padding: 1.25rem 2rem 1.25rem 0.5rem;
     }
 
-    input[type=text],
-    input[type=email],
-    input[type=password] {
-        @include field;
-        @media (min-width: 320px){
-            padding: 1.25rem 2rem 1.25rem 0.5rem;
-            }
-          
-        @media (min-width: 480px){
-            padding: 1.25rem 3rem 1.25rem 0.5rem;
-            }
-          
-        @media (min-width: 768px){
-            padding: 1.25rem 4rem 1.25rem 0.5rem;
-            }
-          
-        @media (min-width: 1080px){
-            padding: 1.25rem 5rem 1.25rem 0.5rem;
-            }
-          
-        @media (min-width: 1200px){
-            padding: 1.25rem 6rem 1.25rem 0.5rem;
-            }
+    @media (min-width: 480px) {
+      padding: 1.25rem 3rem 1.25rem 0.5rem;
     }
 
-    input[type=email]{
-        border: 1px solid var(--text-light);
+    @media (min-width: 768px) {
+      padding: 1.25rem 4rem 1.25rem 0.5rem;
     }
 
-    input[type=email],
-    input[type=password]{
-        border-top: none;
-        
+    @media (min-width: 1080px) {
+      padding: 1.25rem 5rem 1.25rem 0.5rem;
     }
 
-    .actions {
-        @include action;
-    
-        input[type=submit] {
-            color: var(--white);
-            margin: 0;
-            background-color: transparent;
-            border: none;
-            font-size: var(--fs-m);
+    @media (min-width: 1200px) {
+      padding: 1.25rem 6rem 1.25rem 0.5rem;
+    }
+  }
 
-            &:hover,
-            &:focus {
-                border: 1px solid var(--white);
-                border-radius: var(--border-radius);
-            }
+  input[type="email"] {
+    border: 1px solid var(--text-light);
+  }
 
-        }
+  input[type="email"],
+  input[type="password"] {
+    border-top: none;
+  }
 
-        @media (min-width: 320px){
-            // padding: 1rem 2.75rem;
-    
-            }
-          
-        @media (min-width: 480px){
-            // padding: 1rem 2.50rem;
-            }
-          
-        @media (min-width: 768px){
-            display: flex;
-            position: static;
-            margin: 1rem 0;
-            padding: 0;
+  .actions {
+    @include action;
 
-            input[type=submit] {
-                @include Button;
-                color: var(--white);
-                margin: 0;
-            }
+    input[type="submit"] {
+      color: var(--white);
+      margin: 0;
+      background-color: transparent;
+      border: none;
+      font-size: var(--fs-m);
 
-            }
-          
-        @media (min-width: 1080px){
-            // padding: 1rem 2.00rem;
-            }
-          
-        @media (min-width: 1200px){
-            // padding: 1rem 1.75rem;
-            }
+      &:hover,
+      &:focus {
+        border: 1px solid var(--white);
+        border-radius: var(--border-radius);
+      }
     }
 
-    .back {
-        @include back;
+    @media (min-width: 320px) {
+      // padding: 1rem 2.75rem;
     }
 
-    #error_explanation {
-        @include errorExplain;
-
-        li {
-            font-size: var(--fs-m);
-        }
+    @media (min-width: 480px) {
+      // padding: 1rem 2.50rem;
     }
+
+    @media (min-width: 768px) {
+      display: flex;
+      position: static;
+      margin: 1rem 0;
+      padding: 0;
+
+      input[type="submit"] {
+        @include Button;
+        color: var(--white);
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 1080px) {
+      // padding: 1rem 2.00rem;
+    }
+
+    @media (min-width: 1200px) {
+      // padding: 1rem 1.75rem;
+    }
+  }
+
+  .back {
+    @include back;
+  }
+
+  #error_explanation {
+    @include errorExplain;
+
+    li {
+      font-size: var(--fs-m);
+    }
+  }
 }
