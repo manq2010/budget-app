@@ -6,7 +6,6 @@ class GroupsController < ApplicationController
     @group_totals = @groups.to_h { |group| [group.id, group.expenses.sum(:amount)] }
   end
 
-
   def show
     @group = current_user.groups.find(params[:id])
     @expenses = @group.expenses.order(created_at: :desc)
