@@ -6,6 +6,12 @@ table {
     // width: max-content;
     // border-radius: var(--border-radius);
     gap: 1rem;
+    margin-bottom: 4rem;
+
+    @media (min-width: 768px){
+        // padding: 1rem 2.25rem;
+        margin-bottom: 0;
+        }
     
     th,
     td {

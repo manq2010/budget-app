@@ -116,6 +116,44 @@
   }
 }
 
+@mixin backHome {
+  // position: relative;
+  // padding-left: 30px;
+  // margin-bottom: 10px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  z-index: 5;
+  font-size: var(--fs-l);
+  font-style: italic;
+
+
+  &:before {
+    content: 'xL';
+    position: absolute;
+    left: 0;
+    color: var(--white);
+  }
+
+  @media (min-width: 480px){
+    // padding: 1rem 2.50rem;
+    &:before {
+      content: 'XpenseList';
+      left: 1rem;
+    }
+  }
+
+  @media (min-width: 768px){
+    // padding: 1rem 2.50rem;
+    &:before {
+      left: 2rem;
+    }
+  }
+}
+
 @mixin boxShadow {
 box-shadow: 0 10px 30px -15px var(--main-shadow);
 // transition: var(--transition-effect);

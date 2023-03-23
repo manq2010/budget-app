@@ -9,36 +9,35 @@
 
 <%= render @group %>
 
-<%= link_to "Add new expense", new_group_expense_path(@group) %>
 <%= link_to "Edit this Category", edit_group_path(@group) %>
 <%= button_to "Delete this Category", @group, method: :delete %>
 
-  <div class="expenses-list">
-    <h3>Expenses</h3>
-    <% if @group.expenses.any? %>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Date</th>
-            <th>Action</th>
-          </tr>
-        </thead>
+<div class="expenses-list">
+<h3>Expenses</h3>
+<% if @group.expenses.any? %>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Amount</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+</thead>
         <tbody>
-          <% @group.expenses.order(created_at: :desc).each do |expense| %>
-            <tr>
-              <td><%= expense.name %></td>
-              <td class="amount"><%= expense.amount %></td>
-              <td><%= expense.created_at.strftime('%B %d, %Y') %></td>
-              <td>
-              <div class="action">
-        
-                <%= link_to "View", group_expense_path(@group, expense), class: "table-view"  %>
-            
+        <% @group.expenses.order(created_at: :desc).each do |expense| %>
+          <tr>
+          <td><%= expense.name %></td>
+          <td class="amount"><%= expense.amount %></td>
+          <td><%= expense.created_at.strftime('%B %d, %Y') %></td>
+          <td>
+          <div class="action">
+          
+          <%= link_to "View", group_expense_path(@group, expense), class: "table-view"  %>
+          
                 <%= button_to "Delete", [@group, expense], method: :delete, data: { confirm: 'Are you sure?' }, class: "table-delete"  %>
          
-              </div>
+                </div>
               </td>
             </tr>
           <% end %>
@@ -48,5 +47,8 @@
       <p>No expenses found for this group.</p>
     <% end %>
   </div>
-
-</section>
+  
+  <%= link_to "Add expense", new_group_expense_path(@group), class: "new-expense" %>
+  
+  </section>
+  
