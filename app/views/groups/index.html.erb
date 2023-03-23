@@ -13,7 +13,7 @@
   <ul id="groups">
     <% @groups.each do |group| %>
       <li class="group-category">
-        <%= link_to group_path(group) do %>
+        <%= link_to group_path(group), id: "link-group" do %>
           <%= render group %>
         <% end %>
       </li>
