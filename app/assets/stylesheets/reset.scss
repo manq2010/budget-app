@@ -1,11 +1,6 @@
-@import "mixins";
-
 .reset-screen {
   margin-top: 0;
-
-  //   @include flexCenter;
   display: flex;
-  // justify-content: center;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
@@ -49,12 +44,7 @@
     }
   }
 
-  // input[type="email"] {
-  //   border: 1px solid var(--text-light);
-  // }
-
   .actions {
-    // @include action; z-index: 5;
     position: fixed;
     top: 0;
     right: 0;
@@ -82,8 +72,6 @@
       padding: 0;
 
       input[type="submit"] {
-        //@include Button;
-        // color: var(--main);
         background-color: var(--main);
         border: 1px solid var(--main);
         border-radius: var(--border-radius);
@@ -129,7 +117,6 @@
   }
 
   .back {
-    // @include back;
     position: fixed;
     top: 0;
     left: 0;
@@ -160,7 +147,6 @@
   }
 
   #error_explanation {
-    // @include errorExplain;
     margin-top: 4rem;
     margin-bottom: 0.5rem;
 

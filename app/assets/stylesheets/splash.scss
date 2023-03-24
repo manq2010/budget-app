@@ -1,19 +1,11 @@
-@import "mixins";
-
 .splash-screen {
-  //   @include flexCenter;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   .log-in {
-    //@include Button;
-    // color: var(--main);
-    // background-color: var(--main);
-    // border: 1px solid var(--main);
     border-radius: var(--border-radius);
-    // padding: 1.25rem 1.75rem;
     font-size: var(--fs-s);
     font-family: var(--font-mono-family);
     line-height: 1;
@@ -40,12 +32,7 @@
   }
 
   .sign-up {
-    //@include Button;
-    // color: var(--main);
-    // background-color: var(--main);
-    // border: 1px solid var(--main);
     border-radius: var(--border-radius);
-    // padding: 1.25rem 1.75rem;
     font-size: var(--fs-s);
     font-family: var(--font-mono-family);
     line-height: 1;

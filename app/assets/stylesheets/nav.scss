@@ -12,30 +12,25 @@
 
   h4 {
     text-transform: uppercase;
-    // font-size: clamp(26px, 5vw, 30px);
     font-size: 28px;
     margin-top: 5px;
   }
 
   h5 {
     text-transform: uppercase;
-    // font-size: clamp(18px, 4vw, 22px);
     font-size: 20px;
   }
 
   .actions {
-    // @include action;
     z-index: 5;
     position: fixed;
     top: 0;
     right: 0;
-    // margin: 0.5rem;
     padding: 0.5rem;
     text-decoration: none;
     color: var(--white);
     margin: 0.5rem;
     background-color: transparent;
-    // border: none;
     font-size: var(--fs-m);
     border: 1px solid var(--white);
     border-radius: var(--border-radius);

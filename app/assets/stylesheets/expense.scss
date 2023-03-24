@@ -1,11 +1,6 @@
-@import "mixins";
-
 .add-expense {
   margin-top: 0;
-
-  // @include flexCenter;
   display: flex;
-  // justify-content: center;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
@@ -16,10 +11,8 @@
 
   input[type="text"],
   input[type="number"] {
-    // @include field;
     color: var(--text);
     background-color: var(--white);
-    // border: 1px solid var(--text-light);
     padding: 1.25rem 1rem 1.25rem 0.5rem;
     font-size: var(--fs-m);
     font-family: var(--font-mono-family);
@@ -53,7 +46,6 @@
   }
 
   .actions {
-    // @include action;
     z-index: 5;
     position: fixed;
     top: 0;
@@ -82,8 +74,6 @@
       padding: 0;
 
       input[type="submit"] {
-        //@include Button;
-        // color: var(--main);
         background-color: var(--main);
         border: 1px solid var(--main);
         border-radius: var(--border-radius);
@@ -113,10 +103,6 @@
   }
 
   .new-expense {
-    //@include Button;
-    // color: var(--main);
-    // background-color: var(--main);
-    // border: 1px solid var(--main);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;
     font-size: var(--fs-s);
@@ -127,16 +113,6 @@
     transition: var(--transition);
     display: flex;
     justify-content: center;
-
-    // &:hover,
-    // &:focus,
-    // &:active {
-    //   background-color: var(--second);
-    //   outline: none;
-    //   border: 1px solid var(--second);
-    //   color: var(--white);
-    // }
-
     width: 80%;
     margin-top: 1rem;
     color: var(--white);
@@ -182,7 +158,6 @@
   }
 
   .back {
-    // @include back;
     position: fixed;
     top: 0;
     left: 0;
@@ -213,7 +188,6 @@
   }
 
   #error_explanation {
-    // @include errorExplain;
     margin-top: 4rem;
     margin-bottom: 0.5rem;
 
@@ -225,10 +199,7 @@
 
 .single-expense {
   margin-top: 0;
-
-  // @include flexCenter;
   display: flex;
-  // justify-content: center;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
@@ -236,7 +207,6 @@
   gap: 1rem;
 
   .back {
-    // @include back;
     position: fixed;
     top: 0;
     left: 0;

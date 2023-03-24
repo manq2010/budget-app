@@ -1,17 +1,11 @@
-@import "mixins";
-
 .single-category {
   margin-top: 0;
-
-  //   @include flexCenter;
   display: flex;
-  //   justify-content: center;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
 
   .back {
-    // @include back;
     position: fixed;
     top: 0;
     left: 0;
@@ -42,7 +36,6 @@
   }
 
   .back-home {
-    // @include backHome;
     position: fixed;
     top: 0;
     left: 0;
@@ -74,10 +67,6 @@
   }
 
   .new-expense {
-    //@include Button;
-    // color: var(--main);
-    // background-color: var(--main);
-    // border: 1px solid var(--main);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;
     font-size: var(--fs-s);
@@ -88,16 +77,6 @@
     transition: var(--transition);
     display: flex;
     justify-content: center;
-
-    // &:hover,
-    // &:focus,
-    // &:active {
-    //   background-color: var(--second);
-    //   outline: none;
-    //   border: 1px solid var(--second);
-    //   color: var(--white);
-    // }
-
     width: 80%;
     margin-top: 1rem;
     color: var(--white);
@@ -157,7 +136,6 @@
     }
 
     img {
-      //   @include boxShadow;
       box-shadow: 0 10px 30px -15px var(--main-shadow);
 
       &:hover,
@@ -199,10 +177,7 @@
 
 .categories {
   margin-top: 0;
-
-  //   @include flexCenter;
   display: flex;
-  //   justify-content: center;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
@@ -236,7 +211,6 @@
     }
 
     .group-category {
-      //   @include boxShadow;
       box-shadow: 0 10px 30px -15px var(--main-shadow);
 
       &:hover,
@@ -329,10 +303,6 @@
   }
 
   .new-category {
-    //@include Button;
-    // color: var(--main);
-    // background-color: var(--main);
-    // border: 1px solid var(--main);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;
     font-size: var(--fs-s);
@@ -343,16 +313,6 @@
     transition: var(--transition);
     display: flex;
     justify-content: center;
-
-    // &:hover,
-    // &:focus,
-    // &:active {
-    //   background-color: var(--second);
-    //   outline: none;
-    //   border: 1px solid var(--second);
-    //   color: var(--white);
-    // }
-
     width: 80%;
     margin-top: 1rem;
     color: var(--white);
@@ -398,7 +358,6 @@
   }
 
   .back-home {
-    // @include backHome;
     position: fixed;
     top: 0;
     left: 0;
@@ -433,10 +392,7 @@
 .edit-category,
 .add-category {
   margin-top: 0;
-
-  //   @include flexCenter;
   display: flex;
-  //   justify-content: center;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
@@ -446,10 +402,8 @@
   }
 
   input[type="text"] {
-    // @include field;
     color: var(--text);
     background-color: var(--white);
-    // border: 1px solid var(--text-light);
     padding: 1.25rem 1rem 1.25rem 0.5rem;
     font-size: var(--fs-m);
     font-family: var(--font-mono-family);
@@ -483,7 +437,6 @@
   }
 
   .actions {
-    // @include action;
     z-index: 5;
     position: fixed;
     top: 0;
@@ -512,8 +465,6 @@
       padding: 0;
 
       input[type="submit"] {
-        //@include Button;
-        // color: var(--main);
         background-color: var(--main);
         border: 1px solid var(--main);
         border-radius: var(--border-radius);
@@ -543,7 +494,6 @@
   }
 
   .back {
-    // @include back;
     position: fixed;
     top: 0;
     left: 0;
@@ -574,7 +524,6 @@
   }
 
   #error_explanation {
-    // @include errorExplain;
     margin-top: 4rem;
     margin-bottom: 0.5rem;
 

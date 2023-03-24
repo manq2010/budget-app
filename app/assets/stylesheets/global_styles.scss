@@ -1,5 +1,3 @@
-@import "mixins";
-
 body {
   color: var(--text);
   background-color: var(--text-lightest);
@@ -45,17 +43,14 @@ h6 {
 }
 
 .biggest-heading {
-  // font-size: clamp(40px, 8vw, 80px);
   font-size: 60px;
 }
 
 .big-heading {
-  // font-size: clamp(35px, 7vw, 60px);
   font-size: 45px;
 }
 
 .medium-heading {
-  // font-size: clamp(30px, 6vw, 40px);
   font-size: 35px;
 }
 
@@ -74,7 +69,6 @@ h6 {
   align-items: center;
   position: relative;
   width: 100%;
-  // font-size: clamp(14px, 4vw, 18px);
   font-size: 16px;
   white-space: nowrap;
 }
