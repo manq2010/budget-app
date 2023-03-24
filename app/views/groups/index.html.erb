@@ -7,7 +7,6 @@
   <% end %>
   </div>
 
-  
   <p style="color: green", class="notice"><%= notice %></p>
 
   <ul id="groups">
@@ -19,5 +18,8 @@
       </li>
     <% end %>
   </ul>
-    <%= link_to "Add Category", new_group_path, class: "new-category" %>
+    <%= link_to new_group_path, class: "new-category"  do %> 
+      <p class="add">Add Category</p>
+    <% end %>
+
 </section>

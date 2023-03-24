@@ -9,6 +9,7 @@
     margin-top: 6rem;
   }
 
+  select,
   input[type="text"],
   input[type="number"] {
     color: var(--text);
@@ -43,6 +44,10 @@
     @media (min-width: 1200px) {
       padding: 1.25rem 6rem 1.25rem 0.5rem;
     }
+  }
+
+  select {
+    width: 13rem;
   }
 
   .actions {

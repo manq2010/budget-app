@@ -1,6 +1,7 @@
 <div class="group-item">
-  <img src="<%= group.icon %>" alt="<%= group.name %>" >
-
+  <div class="img-item">
+   <img src="<%= group.icon %>" alt="<%= group.name %>" >
+  </div>
   <div class="details">
     <div class="inner-details">
       <h4 class="smallest-headingg">
@@ -12,7 +13,7 @@
     </div>
     <div class="outer-details">
       <% if action_name == 'index' %>
-        <p>Total: $<%= @group_totals&.[](group.id) %></p>
+        <p>$<%= @group_totals&.[](group.id)%>.00</p>
       <% elsif action_name == 'show' %>
         <p>Total amount: $<%= group.expenses.sum(:amount) %></p>
       <% end %>

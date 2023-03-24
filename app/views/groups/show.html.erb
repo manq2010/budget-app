@@ -44,7 +44,9 @@
     <% end %>
   </div>
   
-  <%= link_to "Add expense", new_group_expense_path(@group), class: "new-expense" %>
+  <%= link_to new_group_expense_path(@group), class: "new-expense" do %>
+    <p class="add">Add expense</p>
+  <% end %>
 
   </section>
   
