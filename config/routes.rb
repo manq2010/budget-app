@@ -5,15 +5,8 @@ Rails.application.routes.draw do
     registration: 'register', edit: 'edit/profile'
   }, sign_out_via: [:get, :post]
 
-  resources :groups, path: 'categories' do
-    resources :expenses
+  resources :groups, path: 'categories', only: [:new, :create, :index, :show, :destroy, :edit] do
+    resources :expenses, only: [:new, :create, :index, :show, :destroy]
   end
-  # resources :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
-  # root "expenses#index"
   root to: "splash#index"
 end
