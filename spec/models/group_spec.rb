@@ -5,7 +5,8 @@ RSpec.describe Group, type: :model do
 
   describe 'validations' do
     it 'is valid with a name, icon and user_id' do
-      category = Group.new(name: 'Apple Test', icon: 'https://avatars.githubusercontent.com/u/53082877?s=96&v=4', user_id: user.id)
+      category = Group.new(name: 'Apple Test', icon: 'https://avatars.githubusercontent.com/u/53082877?s=96&v=4',
+                           user_id: user.id)
       expect(category).to be_valid
     end
 

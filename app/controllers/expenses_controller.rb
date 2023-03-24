@@ -25,10 +25,12 @@ class ExpensesController < ApplicationController
     @expense = Expense.new(expense_params)
     @expense.author_id = current_user.id
     @expense.groups = Group.where(id: params[:expense][:group_ids]).includes([:user])
-    
+
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to group_path(id: params[:expense][:group_ids].last), notice: 'Expense was successfully created.' }
+        format.html do
+          redirect_to group_path(id: params[:expense][:group_ids].last), notice: 'Expense was successfully created.'
+        end
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new }
@@ -36,7 +38,7 @@ class ExpensesController < ApplicationController
       end
     end
   end
-  
+
   def update
     respond_to do |format|
       if @expense.update(expense_params)
@@ -70,5 +72,5 @@ class ExpensesController < ApplicationController
 
   def expense_params
     params.require(:expense).permit(:name, :amount, group_ids: [])
-  end  
+  end
 end
