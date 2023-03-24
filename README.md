@@ -1,97 +1,134 @@
-<div align="center">
-  <br/>
-  <h1>Budget App</h1>
-  <h3>An app to manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what</h3>
-</div>
+<a name="readme-top"></a>
 
----
+# 📗 Table of Contents
 
-# Table of Contents
-
-- [About the Project](#about-the-project)
-  - [Built With](#built-with)
-  - [Live Demo](#live-demo)
-- [Getting Started](#getting-started)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+    - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Install](#install)
   - [Usage](#usage)
-  - [Testing](#testing)
-  - [Deployment](#deployment)
-- [Authors](#authors)
-- [Future Features](#future-features)
-- [Contributing](#contributing)
-- [Show Your Support](#show-your-support)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
+  - [Run tests](#run-tests)
+  <!-- - [Deployment](#triangular_flag_on_post-deployment) -->
+- [👤 Author](#author)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+<!-- - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq) -->
+- [📝 License](#license)
 
-## About the Project
+# 📖 Budget App <a name="about-project"></a>
 
 A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-### Built With
-
+## 🛠 Built With <a name="built-with"></a>
 The Recipe App was built with:
 
 - Ruby On Rails
 - PostgreSQL
 
-### Live Demo
+### Tech Stack <a name="tech-stack"></a>
 
-[Live preview](https://xpenses-list-dev.onrender.com)
+<!-- <details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details> -->
 
-## Getting Started
+  <ul>
+    <li><a href="https://rubyonrails.org/">Rails</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
+  </ul>
 
-To get a local copy up and running, follow these steps:
+### Key Features <a name="key-features"></a>
+
+- **Authentication**
+- **Table Logic**
+
+### Live Demo <a name="live-demo"></a>
+
+[Live Demo](https://xpenses-list-dev.onrender.com)
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-To run this project, you'll need to install:
-
+In order to run this project you need:
 - Ruby 2.7.0 or later
 - Rails 6.0 or later
 - PostgreSQL
 
-### Installation
+After installing Ruby, run the following command to install rails.-
 
-1. Clone this repository to your desired folder:
+```sh
+ gem install rails
+```
 
-`git clone git@github.com:manq2010/budget-app.git`
+### Setup
 
-`cd budget-app`
+- Clone this project on your local machine using the following command in your terminal:
 
-2. Install the required gems:
+- Make sure to add .env file on your root directory and setup your .env file with your postgres username and password!
+
+```sh
+  git clone https://github.com:manq2010/budget-app.git
+  bundle install
+  rails s
+```
+
+### Install
+
+Run the following command to install all project's dependencies:
+
+```sh
+  cd recipe-app
+  bundle install
+  node install
+```
+
+### Running the app
+
+rails db:create:all
+rails db:migrate
+rails db:seed ### to populate the database with some sample data.
+rails s ## to start the server.
+http://localhost:3000 ## app link in the browser
+
+### Usage
 
 `bundle install`
 
-3. Set up the database:
+Next setup your .env so that you can create your dbs. Then:
 
 `rails db:create`
 
 `rails db:migrate`
 
+`rails db:seed`
 
-### Usage
+`rails c` --> To run rails console
 
-To run the project, execute the following command:
+`rails s` --> To run rails server
 
-`rails server`
+### Run tests
 
+- Make sure to add data to the test db or create dummy data on the test files inside rspec folder.
 
-### Testing
+`bundle install`
 
-To run tests, run the following command:
+`rspec spec`
 
-`bundle exec rspec`
-
-
-### Deployment
-
-You can deploy this project using:
-
-- Rendor
-- Other cloud hosting providers
-
-## Authors
+## 👤 Author <a name="author"></a>
 
 👤 **Mancoba Sihlongonyane**
 
@@ -99,26 +136,30 @@ You can deploy this project using:
 - Twitter: [@mancoba_c](https://twitter.com/mancoba_c/)
 - LinkedIn: [mancobasihlongonyane](https://linkedin.com/in/mancobasihlongonyane/)
 
-## Future Features
+## 🔭 Future Features <a name="future-features"></a>
 
 - implement some UX improvements: include transitions and/or animations, etc.
 - A decent desktop design for the webapp.
 - Implement the left side menu to improve the navigability of the app
 
-## Contributing
+## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues/).
+Contributions, issues, and feature requests are welcome!
 
-## Show Your Support
+Feel free to check the [issues page](../../issues/).
 
-Give a ⭐️ if you like this project!
+## ⭐️ Show your support <a name="support"></a>
 
-## Acknowledgements
+If you like this project, kindly give it a star ⭐️
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - [Microverse](https://www.microverse.org/) for providing the education that inspired this project.
 - [RailsGuides](https://guides.rubyonrails.org/) for the excellent documentation on Ruby on Rails.
 - [Gregoire Vella](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for the original design idea on Behance.
 
-## License
-
+## 📝 License <a name="license"></a>
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
