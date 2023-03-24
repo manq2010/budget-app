@@ -1,16 +1,42 @@
 <section class="add-expense">
+  <div class="nav">
+    <h5>Add Expense</h5>
+  </div>
 
-<div class="nav">
-<h5>Add Expense</h5>
-</div>
+  <%= form_with(model: [@group, @expense], url: group_expenses_path(@group)) do |form| %>
+    <% if @expense.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(@expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
 
-<%= render "form", expense: @expense %>
+        <ul>
+          <% @expense.errors.each do |error| %>
+            <<li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-<br>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, required: true, placeholder: "Expense name"  %>
+    </div>
 
-<%= link_to "", @group, class: 'back'%>
+    <div class="field">
+      <%= form.label :amount %>
+      <%= form.number_field :amount, required: true, placeholder: "Amount" %>
+    </div>
 
+    <div class="field">
+      <%= form.label :group_ids %>
+      <%= form.collection_select(:group_ids, current_user.groups, :id, :name, { selected: @group.id }, { multiple: true, class: "form-control" }) %>
+    </div>
 
-<%= link_to "", group_path(@group), class: 'back' %>
+    <div class="actions">
+      <%= form.submit "Save" %>
+    </div>
+  <% end %>
 
+  <br>
+
+  <%= link_to "", group_path(@group), class: 'back' %>
 </section>
