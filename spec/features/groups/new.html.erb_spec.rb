@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature 'Group/Category new page', type: :feature do
   let!(:user) { create(:user) }
-  let!(:category) { create(:group, user:, name: 'Apple Test', icon: 'icon') }
+  let!(:category) { create(:group, user:, name: 'Apple Test', icon: 'https://avatars.githubusercontent.com/u/53082877?s=96&v=4') }
   before do
     sign_in user
     visit new_group_path

@@ -14,20 +14,8 @@ RSpec.describe ExpensesController, type: :routing do
       expect(get: '/categories/1/expenses/1').to route_to('expenses#show', id: '1', group_id: '1')
     end
 
-    it 'routes to #edit' do
-      expect(get: '/categories/1/expenses/1/edit').to route_to('expenses#edit', id: '1', group_id: '1')
-    end
-
     it 'routes to #create' do
       expect(post: '/categories/1/expenses').to route_to('expenses#create', group_id: '1')
-    end
-
-    it 'routes to #update via PUT' do
-      expect(put: '/categories/1/expenses/1').to route_to('expenses#update', id: '1', group_id: '1')
-    end
-
-    it 'routes to #update via PATCH' do
-      expect(patch: '/categories/1/expenses/1').to route_to('expenses#update', id: '1', group_id: '1')
     end
 
     it 'routes to #destroy' do

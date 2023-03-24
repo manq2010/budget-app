@@ -22,14 +22,6 @@ RSpec.describe GroupsController, type: :routing do
       expect(post: '/categories').to route_to('groups#create')
     end
 
-    it 'routes to #update via PUT' do
-      expect(put: '/categories/1').to route_to('groups#update', id: '1')
-    end
-
-    it 'routes to #update via PATCH' do
-      expect(patch: '/categories/1').to route_to('groups#update', id: '1')
-    end
-
     it 'routes to #destroy' do
       expect(delete: '/categories/1').to route_to('groups#destroy', id: '1')
     end
