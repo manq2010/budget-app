@@ -17,17 +17,15 @@
     <% end %>
 
     <div class="field">
-      <%= form.label :name %>
       <%= form.text_field :name, required: true, placeholder: "Expense name"  %>
     </div>
 
     <div class="field">
-      <%= form.label :amount %>
       <%= form.number_field :amount, required: true, placeholder: "Amount" %>
     </div>
 
     <div class="field">
-      <%= form.label :group_ids %>
+      <%= form.label :categories %>
       <%= form.collection_select(:group_ids, current_user.groups, :id, :name, { selected: @group.id }, { multiple: true, class: "form-control" }) %>
     </div>
 
