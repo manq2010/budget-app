@@ -2,7 +2,11 @@
 
 .add-expense {
   margin-top: 0;
-  @include flexCenter;
+
+  // @include flexCenter;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
   justify-content: flex-start;
   flex-direction: column;
 
@@ -12,8 +16,21 @@
 
   input[type="text"],
   input[type="number"] {
-    @include field;
+    // @include field;
+    color: var(--text);
+    background-color: var(--white);
+    // border: 1px solid var(--text-light);
+    padding: 1.25rem 1rem 1.25rem 0.5rem;
+    font-size: var(--fs-m);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: start;
     border: 1px solid var(--text-light);
+
     @media (min-width: 320px) {
       padding: 1.25rem 2rem 1.25rem 0.5rem;
     }
@@ -36,7 +53,13 @@
   }
 
   .actions {
-    @include action;
+    // @include action;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
 
     input[type="submit"] {
       color: var(--white);
@@ -59,7 +82,30 @@
       padding: 0;
 
       input[type="submit"] {
-        @include Button;
+        //@include Button;
+        // color: var(--main);
+        background-color: var(--main);
+        border: 1px solid var(--main);
+        border-radius: var(--border-radius);
+        padding: 1.25rem 1.75rem;
+        font-size: var(--fs-s);
+        font-family: var(--font-mono-family);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        justify-content: center;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--second);
+          outline: none;
+          border: 1px solid var(--second);
+          color: var(--white);
+        }
+
         color: var(--white);
         margin: 0;
       }
@@ -67,7 +113,30 @@
   }
 
   .new-expense {
-    @include Button;
+    //@include Button;
+    // color: var(--main);
+    // background-color: var(--main);
+    // border: 1px solid var(--main);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.75rem;
+    font-size: var(--fs-s);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //   background-color: var(--second);
+    //   outline: none;
+    //   border: 1px solid var(--second);
+    //   color: var(--white);
+    // }
+
     width: 80%;
     margin-top: 1rem;
     color: var(--white);
@@ -113,11 +182,40 @@
   }
 
   .back {
-    @include back;
+    // @include back;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    z-index: 5;
+
+    &::before {
+      content: "<";
+      position: absolute;
+      left: 0;
+      color: var(--white);
+    }
+
+    @media (min-width: 480px) {
+      &::before {
+        content: "Back";
+        left: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        content: "Back";
+        left: 2rem;
+      }
+    }
   }
 
   #error_explanation {
-    @include errorExplain;
+    // @include errorExplain;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
 
     li {
       font-size: var(--fs-m);
@@ -127,13 +225,44 @@
 
 .single-expense {
   margin-top: 0;
-  @include flexCenter;
+
+  // @include flexCenter;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   text-align: center;
   gap: 1rem;
 
   .back {
-    @include back;
+    // @include back;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    z-index: 5;
+
+    &::before {
+      content: "<";
+      position: absolute;
+      left: 0;
+      color: var(--white);
+    }
+
+    @media (min-width: 480px) {
+      &::before {
+        content: "Back";
+        left: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        content: "Back";
+        left: 2rem;
+      }
+    }
   }
 }

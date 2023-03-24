@@ -1,5 +1,3 @@
-@import "mixins";
-
 .nav {
   position: fixed;
   z-index: 5;
@@ -14,23 +12,30 @@
 
   h4 {
     text-transform: uppercase;
-    font-size: clamp(26px, 5vw, 30px);
+    // font-size: clamp(26px, 5vw, 30px);
+    font-size: 28px;
     margin-top: 5px;
   }
 
   h5 {
     text-transform: uppercase;
-    font-size: clamp(18px, 4vw, 22px);
-    margin-top: 5px;
+    // font-size: clamp(18px, 4vw, 22px);
+    font-size: 20px;
   }
 
   .actions {
-    @include action;
+    // @include action;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    // margin: 0.5rem;
+    padding: 0.5rem;
     text-decoration: none;
     color: var(--white);
     margin: 0.5rem;
     background-color: transparent;
-    border: none;
+    // border: none;
     font-size: var(--fs-m);
     border: 1px solid var(--white);
     border-radius: var(--border-radius);
@@ -46,6 +51,7 @@
 .expense {
   height: var(--navbar-height2);
   align-items: start;
+
   .actions.delete {
     margin: 3rem 9rem 0 0;
   }

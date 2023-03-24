@@ -1,8 +1,209 @@
 @import "mixins";
 
+.single-category {
+  margin-top: 0;
+
+  //   @include flexCenter;
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  .back {
+    // @include back;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    z-index: 5;
+
+    &::before {
+      content: "<";
+      position: absolute;
+      left: 0;
+      color: var(--white);
+    }
+
+    @media (min-width: 480px) {
+      &::before {
+        content: "Back";
+        left: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        content: "Back";
+        left: 2rem;
+      }
+    }
+  }
+
+  .back-home {
+    // @include backHome;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    z-index: 5;
+    font-size: var(--fs-l);
+    font-style: italic;
+
+    &::before {
+      content: "xL";
+      position: absolute;
+      left: 0;
+      color: var(--white);
+    }
+
+    @media (min-width: 480px) {
+      &::before {
+        content: "XpenseList";
+        left: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        left: 2rem;
+      }
+    }
+  }
+
+  .new-expense {
+    //@include Button;
+    // color: var(--main);
+    // background-color: var(--main);
+    // border: 1px solid var(--main);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.75rem;
+    font-size: var(--fs-s);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //   background-color: var(--second);
+    //   outline: none;
+    //   border: 1px solid var(--second);
+    //   color: var(--white);
+    // }
+
+    width: 80%;
+    margin-top: 1rem;
+    color: var(--white);
+    background-color: var(--second);
+    border: 1px solid var(--second);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--main);
+      outline: none;
+      border: 1px solid var(--main);
+    }
+
+    position: fixed;
+    bottom: 0;
+    z-index: 4;
+    opacity: 0.9;
+
+    @media (min-width: 320px) {
+      width: 80%;
+    }
+
+    @media (min-width: 480px) {
+      width: 70%;
+    }
+
+    @media (min-width: 768px) {
+      position: static;
+      z-index: 4;
+      opacity: 1;
+      width: 20%;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 1080px) {
+      width: 22%;
+    }
+
+    @media (min-width: 1200px) {
+      width: 24%;
+    }
+  }
+
+  .group-item {
+    color: var(--text);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+
+    .details {
+      text-align: center;
+
+      .inner-details > p {
+        color: var(--text-light);
+      }
+    }
+
+    img {
+      //   @include boxShadow;
+      box-shadow: 0 10px 30px -15px var(--main-shadow);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 20px 30px -15px var(--main-shadow);
+      }
+
+      border-radius: var(--border-radius);
+      height: 100px;
+      width: 100px;
+
+      @media (min-width: 320px) {
+        height: 120px;
+        width: 120px;
+      }
+
+      @media (min-width: 480px) {
+        height: 140px;
+        width: 140px;
+      }
+
+      @media (min-width: 768px) {
+        height: 160px;
+        width: 160px;
+      }
+
+      @media (min-width: 1080px) {
+        height: 180px;
+        width: 180px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+}
+
 .categories {
   margin-top: 0;
-  @include flexCenter;
+
+  //   @include flexCenter;
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
   justify-content: flex-start;
   flex-direction: column;
 
@@ -35,7 +236,14 @@
     }
 
     .group-category {
-      @include boxShadow;
+      //   @include boxShadow;
+      box-shadow: 0 10px 30px -15px var(--main-shadow);
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 20px 30px -15px var(--main-shadow);
+      }
+
       margin: 1rem 0;
       position: relative;
       height: 80px;
@@ -92,7 +300,7 @@
 
             @media (min-width: 320px) {
               height: 100px;
-              height: 100px;
+              width: 100px;
             }
 
             @media (min-width: 480px) {
@@ -121,7 +329,30 @@
   }
 
   .new-category {
-    @include Button;
+    //@include Button;
+    // color: var(--main);
+    // background-color: var(--main);
+    // border: 1px solid var(--main);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.75rem;
+    font-size: var(--fs-s);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //   background-color: var(--second);
+    //   outline: none;
+    //   border: 1px solid var(--second);
+    //   color: var(--white);
+    // }
+
     width: 80%;
     margin-top: 1rem;
     color: var(--white);
@@ -167,110 +398,33 @@
   }
 
   .back-home {
-    @include backHome;
-  }
-}
-
-.single-category {
-  margin-top: 0;
-  @include flexCenter;
-  justify-content: flex-start;
-  flex-direction: column;
-
-  .back {
-    @include back;
-  }
-
-  .back-home {
-    @include backHome;
-  }
-
-  .new-expense {
-    @include Button;
-    width: 80%;
-    margin-top: 1rem;
-    color: var(--white);
-    background-color: var(--second);
-    border: 1px solid var(--second);
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--main);
-      outline: none;
-      border: 1px solid var(--main);
-    }
-
+    // @include backHome;
     position: fixed;
-    bottom: 0;
-    z-index: 4;
-    opacity: 0.9;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    z-index: 5;
+    font-size: var(--fs-l);
+    font-style: italic;
 
-    @media (min-width: 320px) {
-      width: 80%;
+    &::before {
+      content: "xL";
+      position: absolute;
+      left: 0;
+      color: var(--white);
     }
 
     @media (min-width: 480px) {
-      width: 70%;
+      &::before {
+        content: "XpenseList";
+        left: 1rem;
+      }
     }
 
     @media (min-width: 768px) {
-      position: static;
-      z-index: 4;
-      opacity: 1;
-      width: 20%;
-      margin-bottom: 1rem;
-    }
-
-    @media (min-width: 1080px) {
-      width: 22%;
-    }
-
-    @media (min-width: 1200px) {
-      width: 24%;
-    }
-  }
-
-  .group-item {
-    color: var(--text);
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    .details {
-      text-align: center;
-      .inner-details > p {
-        color: var(--text-light);
-      }
-    }
-
-    img {
-      @include boxShadow;
-      border-radius: var(--border-radius);
-      height: 100px;
-      width: 100px;
-      @media (min-width: 320px) {
-        height: 120px;
-        height: 120px;
-      }
-
-      @media (min-width: 480px) {
-        height: 140px;
-        width: 140px;
-      }
-
-      @media (min-width: 768px) {
-        height: 160px;
-        width: 160px;
-      }
-
-      @media (min-width: 1080px) {
-        height: 180px;
-        width: 180px;
-      }
-
-      @media (min-width: 1200px) {
-        height: 200px;
-        width: 200px;
+      &::before {
+        left: 2rem;
       }
     }
   }
@@ -279,7 +433,11 @@
 .edit-category,
 .add-category {
   margin-top: 0;
-  @include flexCenter;
+
+  //   @include flexCenter;
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
   justify-content: flex-start;
   flex-direction: column;
 
@@ -288,7 +446,19 @@
   }
 
   input[type="text"] {
-    @include field;
+    // @include field;
+    color: var(--text);
+    background-color: var(--white);
+    // border: 1px solid var(--text-light);
+    padding: 1.25rem 1rem 1.25rem 0.5rem;
+    font-size: var(--fs-m);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: start;
     border: 1px solid var(--text-light);
 
     @media (min-width: 320px) {
@@ -313,7 +483,13 @@
   }
 
   .actions {
-    @include action;
+    // @include action;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
 
     input[type="submit"] {
       color: var(--white);
@@ -336,7 +512,30 @@
       padding: 0;
 
       input[type="submit"] {
-        @include Button;
+        //@include Button;
+        // color: var(--main);
+        background-color: var(--main);
+        border: 1px solid var(--main);
+        border-radius: var(--border-radius);
+        padding: 1.25rem 1.75rem;
+        font-size: var(--fs-s);
+        font-family: var(--font-mono-family);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        justify-content: center;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--second);
+          outline: none;
+          border: 1px solid var(--second);
+          color: var(--white);
+        }
+
         color: var(--white);
         margin: 0;
       }
@@ -344,11 +543,40 @@
   }
 
   .back {
-    @include back;
+    // @include back;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    z-index: 5;
+
+    &::before {
+      content: "<";
+      position: absolute;
+      left: 0;
+      color: var(--white);
+    }
+
+    @media (min-width: 480px) {
+      &::before {
+        content: "Back";
+        left: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        content: "Back";
+        left: 2rem;
+      }
+    }
   }
 
   #error_explanation {
-    @include errorExplain;
+    // @include errorExplain;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
 
     li {
       font-size: var(--fs-m);

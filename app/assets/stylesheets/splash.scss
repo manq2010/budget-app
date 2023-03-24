@@ -1,11 +1,37 @@
 @import "mixins";
 
 .splash-screen {
-  @include flexCenter;
+  //   @include flexCenter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 
   .log-in {
-    @include Button;
+    //@include Button;
+    // color: var(--main);
+    // background-color: var(--main);
+    // border: 1px solid var(--main);
+    border-radius: var(--border-radius);
+    // padding: 1.25rem 1.75rem;
+    font-size: var(--fs-s);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--second);
+      outline: none;
+      border: 1px solid var(--second);
+      color: var(--white);
+    }
+
     color: var(--white);
     padding: 1rem 2rem;
     background-color: var(--main);
@@ -14,7 +40,30 @@
   }
 
   .sign-up {
-    @include Button;
+    //@include Button;
+    // color: var(--main);
+    // background-color: var(--main);
+    // border: 1px solid var(--main);
+    border-radius: var(--border-radius);
+    // padding: 1.25rem 1.75rem;
+    font-size: var(--fs-s);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--second);
+      outline: none;
+      border: 1px solid var(--second);
+      color: var(--white);
+    }
+
     margin-top: 0.5em;
     padding: 1rem 3rem;
     border: 1px solid transparent;
