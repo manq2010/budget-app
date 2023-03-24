@@ -5,12 +5,12 @@ RSpec.describe Expense, type: :model do
 
   describe 'validations' do
     it 'is valid with a name, amount and user' do
-      expense = Expense.new(name: "Expense Test", amount: 10, author_id: user.id)
+      expense = Expense.new(name: 'Expense Test', amount: 10, author_id: user.id)
       expect(expense).to be_valid
     end
 
     it 'is invalid without a user' do
-      expense = Expense.new(name: "Expense Test", amount: 10)
+      expense = Expense.new(name: 'Expense Test', amount: 10)
       expect(expense).not_to be_valid
       expect(expense.errors[:author_id]).to include("can't be blank")
     end

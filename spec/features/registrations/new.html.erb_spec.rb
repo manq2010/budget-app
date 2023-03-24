@@ -26,6 +26,6 @@ RSpec.feature 'Sign up index page', type: :feature do
     fill_in 'Password', with: user.password
     click_button 'Next'
     sleep(1)
-    expect(page).to have_content("CATEGORIES")
+    expect(page).to have_content('CATEGORIES')
   end
 end
