@@ -1,0 +1,32 @@
+<section class="login-screen">
+
+<div class="nav">
+<h4>Login</h4>
+</div>
+
+
+<p class="notice flex-center"><%= notice %></p>
+<p class="alert flex-center"><%= alert %></p>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, placeholder: "Password",autocomplete: "current-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<%= link_to "", root_path, class: 'back' %>
+
+<%= render "devise/shared/links" %>
+
+</section>

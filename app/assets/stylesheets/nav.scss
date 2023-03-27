@@ -1,0 +1,57 @@
+.nav {
+  position: fixed;
+  z-index: 5;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main);
+  color: var(--white);
+  width: 100%;
+  height: var(--navbar-height);
+
+  h4 {
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-top: 5px;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .actions {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--white);
+    margin: 0.5rem;
+    background-color: transparent;
+    font-size: var(--fs-m);
+    border: 1px solid var(--white);
+    border-radius: var(--border-radius);
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(--second);
+      background-color: var(--second);
+    }
+  }
+}
+
+.expense {
+  height: var(--navbar-height2);
+  align-items: start;
+
+  .actions.delete {
+    margin: 3rem 9rem 0 0;
+  }
+
+  .actions.edit {
+    margin: 3rem 0.5rem 0 0;
+  }
+}

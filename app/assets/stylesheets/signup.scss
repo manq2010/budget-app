@@ -1,0 +1,153 @@
+.sign-up {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  .field:first-of-type {
+    margin-top: 6rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    color: var(--text);
+    background-color: var(--white);
+    border: 1px solid var(--text-light);
+    padding: 1.25rem 1rem 1.25rem 0.5rem;
+    font-size: var(--fs-m);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: start;
+
+    @media (min-width: 320px) {
+      padding: 1.25rem 2rem 1.25rem 0.5rem;
+    }
+
+    @media (min-width: 480px) {
+      padding: 1.25rem 3rem 1.25rem 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      padding: 1.25rem 4rem 1.25rem 0.5rem;
+    }
+
+    @media (min-width: 1080px) {
+      padding: 1.25rem 5rem 1.25rem 0.5rem;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 1.25rem 6rem 1.25rem 0.5rem;
+    }
+  }
+
+  input[type="email"] {
+    border: 1px solid var(--text-light);
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    border-top: none;
+  }
+
+  .actions {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+    input[type="submit"] {
+      color: var(--white);
+      margin: 0;
+      background-color: transparent;
+      border: none;
+      font-size: var(--fs-m);
+
+      &:hover,
+      &:focus {
+        border: 1px solid var(--white);
+        border-radius: var(--border-radius);
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      position: static;
+      margin: 1rem 0;
+      padding: 0;
+
+      input[type="submit"] {
+        background-color: var(--main);
+        border: 1px solid var(--main);
+        border-radius: var(--border-radius);
+        padding: 1.25rem 1.75rem;
+        font-size: var(--fs-s);
+        font-family: var(--font-mono-family);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        justify-content: center;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--second);
+          outline: none;
+          border: 1px solid var(--second);
+          color: var(--white);
+        }
+
+        color: var(--white);
+        margin: 0;
+      }
+    }
+  }
+
+  .back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    z-index: 5;
+
+    &::before {
+      content: "<";
+      position: absolute;
+      left: 0;
+      color: var(--white);
+    }
+
+    @media (min-width: 480px) {
+      &::before {
+        content: "Back";
+        left: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        content: "Back";
+        left: 2rem;
+      }
+    }
+  }
+
+  #error_explanation {
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+
+    li {
+      font-size: var(--fs-m);
+    }
+  }
+}

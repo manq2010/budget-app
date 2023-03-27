@@ -1,0 +1,91 @@
+body {
+  color: var(--text);
+  background-color: var(--text-lightest);
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  font-size: var(--fs-l);
+  line-height: 1.2;
+  font-family: var(--font-main-family);
+
+  @media (min-width: 768) {
+    font-size: var(--fs-xl);
+  }
+}
+
+body *:focus {
+  outline: none;
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+}
+
+section {
+  min-height: 75vh;
+  margin-top: 80px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: var(text--lightest);
+  line-height: 1.1;
+}
+
+.biggest-heading {
+  font-size: 60px;
+}
+
+.big-heading {
+  font-size: 45px;
+}
+
+.medium-heading {
+  font-size: 35px;
+}
+
+.small-heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10px 0 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, var(--fs-heading));
+  white-space: nowrap;
+}
+
+.smallest-heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  white-space: nowrap;
+  color: var(--text-lightest);
+}
+
+input {
+  border-radius: 0;
+  outline: 0;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:focus,
+  &:active {
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+}

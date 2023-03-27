@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.notice,
+.alert {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.notice.other {
+  margin-top: 7rem;
+  margin-bottom: 0.5rem;
+}

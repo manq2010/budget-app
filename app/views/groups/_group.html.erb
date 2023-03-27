@@ -1,0 +1,22 @@
+<div class="group-item">
+  <div class="img-item">
+   <img src="<%= group.icon %>" alt="<%= group.name %>" >
+  </div>
+  <div class="details">
+    <div class="inner-details">
+      <h4 class="smallest-headingg">
+        <%= group.name %>
+      </h4>
+      <p>
+        <%= group.created_at.strftime('%d %b %y') %>
+      </p>
+    </div>
+    <div class="outer-details">
+      <% if action_name == 'index' %>
+        <p>$<%= @group_totals&.[](group.id)%>.00</p>
+      <% elsif action_name == 'show' %>
+        <p>Total amount: $<%= group.expenses.sum(:amount) %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

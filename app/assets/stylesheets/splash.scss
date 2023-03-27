@@ -1,0 +1,61 @@
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .log-in {
+    border-radius: var(--border-radius);
+    font-size: var(--fs-s);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--second);
+      outline: none;
+      border: 1px solid var(--second);
+      color: var(--white);
+    }
+
+    color: var(--white);
+    padding: 1rem 2rem;
+    background-color: var(--main);
+    border: 1px solid var(--main);
+    text-transform: uppercase;
+  }
+
+  .sign-up {
+    border-radius: var(--border-radius);
+    font-size: var(--fs-s);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--second);
+      outline: none;
+      border: 1px solid var(--second);
+      color: var(--white);
+    }
+
+    margin-top: 0.5em;
+    padding: 1rem 3rem;
+    border: 1px solid transparent;
+    color: var(--text-light);
+    text-transform: uppercase;
+    background-color: transparent;
+  }
+}

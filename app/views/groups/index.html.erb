@@ -1,0 +1,25 @@
+<section class="categories">
+  <div class="nav">
+  <p class="back-home"></p>
+    <h5>categories</h5>
+    <% if current_user %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'actions' %>
+  <% end %>
+  </div>
+
+  <p style="color: green", class="notice"><%= notice %></p>
+
+  <ul id="groups">
+    <% @groups.each do |group| %>
+      <li class="group-category">
+        <%= link_to group_path(group), id: "link-group" do %>
+          <%= render group %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+    <%= link_to new_group_path, class: "new-category"  do %> 
+      <p class="add">Add Category</p>
+    <% end %>
+
+</section>

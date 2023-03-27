@@ -1,0 +1,243 @@
+.add-expense {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  .field:first-of-type {
+    margin-top: 6rem;
+  }
+
+  select,
+  input[type="text"],
+  input[type="number"] {
+    color: var(--text);
+    background-color: var(--white);
+    padding: 1.25rem 1rem 1.25rem 0.5rem;
+    font-size: var(--fs-m);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: start;
+    border: 1px solid var(--text-light);
+
+    @media (min-width: 320px) {
+      padding: 1.25rem 2rem 1.25rem 0.5rem;
+    }
+
+    @media (min-width: 480px) {
+      padding: 1.25rem 3rem 1.25rem 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      padding: 1.25rem 4rem 1.25rem 0.5rem;
+    }
+
+    @media (min-width: 1080px) {
+      padding: 1.25rem 5rem 1.25rem 0.5rem;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 1.25rem 6rem 1.25rem 0.5rem;
+    }
+  }
+
+  select {
+    width: 13rem;
+  }
+
+  .actions {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+
+    input[type="submit"] {
+      color: var(--white);
+      margin: 0;
+      background-color: transparent;
+      border: none;
+      font-size: var(--fs-m);
+
+      &:hover,
+      &:focus {
+        border: 1px solid var(--white);
+        border-radius: var(--border-radius);
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      position: static;
+      margin: 1rem 0;
+      padding: 0;
+
+      input[type="submit"] {
+        background-color: var(--main);
+        border: 1px solid var(--main);
+        border-radius: var(--border-radius);
+        padding: 1.25rem 1.75rem;
+        font-size: var(--fs-s);
+        font-family: var(--font-mono-family);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        justify-content: center;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--second);
+          outline: none;
+          border: 1px solid var(--second);
+          color: var(--white);
+        }
+
+        color: var(--white);
+        margin: 0;
+      }
+    }
+  }
+
+  .new-expense {
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.75rem;
+    font-size: var(--fs-s);
+    font-family: var(--font-mono-family);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-top: 1rem;
+    color: var(--white);
+    background-color: var(--second);
+    border: 1px solid var(--second);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--main);
+      outline: none;
+      border: 1px solid var(--main);
+    }
+
+    position: fixed;
+    bottom: 0;
+    z-index: 4;
+    opacity: 0.9;
+
+    @media (min-width: 320px) {
+      width: 80%;
+    }
+
+    @media (min-width: 480px) {
+      width: 70%;
+    }
+
+    @media (min-width: 768px) {
+      position: static;
+      z-index: 4;
+      opacity: 1;
+      width: 20%;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 1080px) {
+      width: 22%;
+    }
+
+    @media (min-width: 1200px) {
+      width: 24%;
+    }
+  }
+
+  .back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    z-index: 5;
+
+    &::before {
+      content: "<";
+      position: absolute;
+      left: 0;
+      color: var(--white);
+    }
+
+    @media (min-width: 480px) {
+      &::before {
+        content: "Back";
+        left: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        content: "Back";
+        left: 2rem;
+      }
+    }
+  }
+
+  #error_explanation {
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+
+    li {
+      font-size: var(--fs-m);
+    }
+  }
+}
+
+.single-expense {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+
+  .back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    z-index: 5;
+
+    &::before {
+      content: "<";
+      position: absolute;
+      left: 0;
+      color: var(--white);
+    }
+
+    @media (min-width: 480px) {
+      &::before {
+        content: "Back";
+        left: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &::before {
+        content: "Back";
+        left: 2rem;
+      }
+    }
+  }
+}

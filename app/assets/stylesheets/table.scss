@@ -1,0 +1,158 @@
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  font-size: var(--fs-xs);
+
+  @media (min-width: 320px) {
+    font-size: var(--fs-s);
+  }
+
+  @media (min-width: 480px) {
+    font-size: var(--fs-m);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    font-size: var(--fs-xl);
+    gap: 2rem;
+  }
+
+  th,
+  td {
+    padding: 0.1rem;
+    text-align: left;
+
+    @media (min-width: 480px) {
+      padding: 0.3rem;
+    }
+
+    @media (min-width: 768px) {
+      padding: 0.6rem;
+    }
+
+    @media (min-width: 1080px) {
+      padding: 1rem;
+    }
+
+    .action {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      @media (min-width: 480px) {
+        flex-direction: row;
+      }
+
+      @media (min-width: 768px) {
+        gap: 1rem;
+      }
+
+      @media (min-width: 1080px) {
+        gap: 2rem;
+      }
+
+      .table-expense {
+        border-radius: var(--border-radius);
+        padding: 0.75rem 1rem;
+        font-size: var(--fs-xs);
+        font-family: var(--font-mono-family);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        margin: 0;
+        color: var(--white);
+        background-color: var(--second);
+        border: 1px solid var(--second);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--main);
+          outline: none;
+          border: 1px solid var(--main);
+        }
+      }
+
+      .table-view {
+        border-radius: var(--border-radius);
+        padding: 0.75rem 1rem;
+        font-size: var(--fs-xs);
+        font-family: var(--font-mono-family);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        margin: 0;
+        color: var(--white);
+        background-color: var(--second);
+        border: 1px solid var(--second);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--main);
+          outline: none;
+          border: 1px solid var(--main);
+        }
+      }
+
+      .table-delete {
+        border-radius: var(--border-radius);
+        padding: 0.75rem 1rem;
+        font-size: var(--fs-xs);
+        font-family: var(--font-mono-family);
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: var(--transition);
+        margin: 0;
+        color: var(--white);
+        background-color: var(--red);
+        border: 1px solid var(--red);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--main);
+          outline: none;
+          border: 1px solid var(--main);
+        }
+      }
+    }
+  }
+
+  .table-desktop {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  th {
+    background-color: var(--main);
+    font-size: var(--fs-m);
+    color: var(--white);
+  }
+
+  tr {
+    background-color: var(--main-light);
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--main-lightest);
+  }
+
+  tr:hover {
+    box-shadow: 0 10px 30px -15px var(--main-shadow);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 20px 30px -15px var(--main-shadow);
+    }
+  }
+}
